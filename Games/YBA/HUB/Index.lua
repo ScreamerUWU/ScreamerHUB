@@ -28,6 +28,7 @@ local AutoDrop = (Base .. ("Drop.lua"))
 local AutoSell = (Base .. ("Sell.lua"))
 local HorseSpeed = (Base .. ("HorseSpeed.lua"))
 local Count = (Base .. ("Count.lua"))
+local Invis = (Base .. ("Invisible.lua"))
 local AutoKick = (Base .. ("AutoKick.lua"))
 local AutoPickup = (Base .. ("AutoPickup.lua"))
 local AutoCA = (Base .. ("Auto.lua"))
@@ -431,6 +432,11 @@ SBRWindow:Button("GODMODE", function()
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Screamer HUB", Text = "GODMODE ENABLED! Reset to disable.", Duration = 7, })
 end)
 
+SBRWindow:Button("INVISIBLE", function()
+    _G.Invisible = true
+    game:GetService("Players").LocalPlayer.Character:BreakJoints()
+end)
+
 --[[ MISC ]]--
 
 MiscWindow:Line(Color3.fromRGB(0,255,0))
@@ -475,6 +481,7 @@ GET(AutoCA)
 GET(Extension)
 wait()
 GET(GodMode)
+GET(Invis)
 
 if game.PlaceId == (4643697430) then
    GET(HorseSpeed)

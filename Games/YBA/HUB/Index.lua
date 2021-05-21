@@ -27,6 +27,7 @@ local WorthTwo = (Base .. ("WorthTwo.lua"))
 local AutoDrop = (Base .. ("Drop.lua"))
 local AutoSell = (Base .. ("Sell.lua"))
 local HorseSpeed = (Base .. ("HorseSpeed.lua"))
+local Count = (Base .. ("Count.lua"))
 local AutoKick = (Base .. ("AutoKick.lua"))
 local AutoPickup = (Base .. ("AutoPickup.lua"))
 local AutoCA = (Base .. ("Auto.lua"))
@@ -365,7 +366,7 @@ ItemCounterWindow:Toggle("AUTO COUNT", _G.AutoCount, function(Bool)
 end)
 
 ItemCounterWindow:Button("COUNT", function()
-    return ("")
+    GET(Count)
 end)
 
 ItemCounterWindow:Line(Color3.fromRGB(0, 0, 255))
@@ -457,11 +458,11 @@ MiscWindow:Toggle("AUTO ARCADE", _G.AutoArcade, function(Bool)
     _G.AutoArcade = Bool
 end)
 
-MiscWindow:Toggle("AUTO-KICK", _G.AutoKick, function(Bool)
+MiscWindow:Toggle("AUTO KICK", _G.AutoKick, function(Bool)
     _G.AutoKick = Bool
 end)
 
-MiscWindow:Toggle("ANTI-AFK", _G.AFK, function(Bool)
+MiscWindow:Toggle("ANTI AFK", _G.AFK, function(Bool)
     _G.AFK = Bool
 end)
 

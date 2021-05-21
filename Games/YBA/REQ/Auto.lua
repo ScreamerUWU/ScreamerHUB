@@ -16,7 +16,8 @@ local function ItemCount(ITEM)
          Found = (Found + 1)
       end
    end
-
+   
+   return Found
 end
 
 local function AutoCount()
@@ -25,7 +26,7 @@ local function AutoCount()
       local Count = ItemCount(_G.ItemCounter[i].ItemName)
     
       _G.ItemCounter[i].Amount = (Count)
-      _G.ItemCounter[i].TextObject.Text = (_G.ItemCounter[i].ItemName .. ": " .. _G.ItemCounter[i].Amount)
+      _G.ItemCounter[i].TextObject.Text = (_G.ItemCounter[i].ItemName .. ": " .. tostring(Count))
    end
 end
 

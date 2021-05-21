@@ -7,7 +7,7 @@ local function RollArcade()
         unpack(ArcadeInfo))
 end
 
-local ItemCount(ITEM)
+local function ItemCount(ITEM)
 
    local Found = 0
 
